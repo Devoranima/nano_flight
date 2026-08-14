@@ -13,7 +13,7 @@ This is the software half of a diploma project. The write-up (Russian) is in
 [`docs/thesis.pdf`](docs/thesis.pdf)
 
 The project was lost during OS migration (yes, I know, I should have used git), 
-so I had to restore this repo based on my memory (which is also in a poor condition lol),
+so I had to restore this repo based on my memory (which is not very trustworthy),
 my thesis and with some help from claude.
 
 ALSO, the drone caugth a short during pid calibration on a stand (my soldering skills imrpoved a bit since then), 
