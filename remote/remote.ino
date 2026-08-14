@@ -135,8 +135,8 @@ void printDroneState(){
     case LANDING:
       Serial.println("Landing");
       break;
-    case SHOTDOWN:
-      Serial.println("Shotdown");
+    case EMERGENCY_STOP:
+      Serial.println("EMERGENCY_STOP");
       break;
   }
 }

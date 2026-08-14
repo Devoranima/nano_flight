@@ -124,7 +124,7 @@ void enterState(Drone_State_t next) {
 
 
 /*=========================== Flight states ===========================*/
-/* IDLE -> DEPARTING -> FLYING -> LANDING -> IDLE, plus SHOTDOWN as a kill
+/* IDLE -> DEPARTING -> FLYING -> LANDING -> IDLE, plus EMERGENCY_STOP as a kill
    switch. */
 
 void updateFlightState() {
@@ -132,7 +132,7 @@ void updateFlightState() {
 
   // kill switch beats everything else
   if (remote_controls.command == SHUTDOWN) {
-    enterState(SHOTDOWN);
+    enterState(EMERGENCY_STOP);
   }
 
   switch (flight_state) {
@@ -181,7 +181,7 @@ void updateFlightState() {
       if (baseThrottle <= PPM_MIN) enterState(IDLE);
       break;
 
-    case SHOTDOWN:
+    case EMERGENCY_STOP:
       // stays dead until the board is power cycled
       stopMotors(current_dynamics);
       break;

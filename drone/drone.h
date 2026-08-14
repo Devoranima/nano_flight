@@ -25,7 +25,7 @@ typedef enum {
   DEPARTING,
   FLYING,
   LANDING,
-  SHOTDOWN
+  EMERGENCY_STOP
 } Drone_State_t;
 
 typedef struct {
