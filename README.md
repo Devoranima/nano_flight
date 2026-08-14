@@ -12,12 +12,11 @@ filter, stabilisation from a PID per axis, and the loop runs at 100 Hz.
 This is the software half of a diploma project. The write-up (Russian) is in
 [`docs/thesis.pdf`](docs/thesis.pdf)
 
-The project was lost during OS migration (yes, I know, I should have used git), 
-so I had to restore this repo based on my memory (which is not very trustworthy),
-my thesis and with some help from claude.
+The project was lost during OS migration, 
+so I had to restore this repo based on my memory, my thesis and with some help from claude.
 
-ALSO, the drone caugth a short during pid calibration on a stand (my soldering skills imrpoved a bit since then), 
-so I could not fully finish it :(
+Also, the drone caught a short during pid calibration on a stand, 
+thus I could not fully finish it and run flight test
 
 ## Hardware
 
@@ -50,7 +49,6 @@ remote/         remote sketch
   remote.ino      input reading, packet TX, telemetry RX
   remote.h        radio protocol
   pins.h          pin map
-recovered/      the salvaged files, untouched
 docs/           thesis PDF and figures pulled out of it
 ```
 
@@ -86,7 +84,7 @@ FL = base + pitch − roll + yaw      FR = base + pitch + roll − yaw
 BL = base − pitch − roll − yaw      BR = base − pitch + roll + yaw
 ```
 
-Only roll and pitch are kinda live. Yaw and altitude hold are
+Only roll and pitch are live. Yaw and altitude hold are
 wired through but have zero gains.
 
 **Flight states.** `IDLE → DEPARTING → FLYING → LANDING → IDLE`, plus
